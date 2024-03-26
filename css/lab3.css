@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Box-sizing reset to border-box (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/) */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+
+#container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Styling for the tabs section */
+.tabs {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+/* Styling for the unordered list within tabs */
+.tabs ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Styling for individual tab items */
+.tabs li {
+	flex-grow: 1;
+}
+
+/* Styling for the tab buttons */
+.tabs li[role="tab"] {
+	background-color: #f0f0f0;
+	padding: 10px 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+/* Styling for the selected tab */
+.tabs li[role="tab"][aria-selected="true"] {
+	background-color: #ccc;
+}
+
+/* Styling for the tab panels */
+.tabs div[role="tabpanel"] {
+	padding: 20px;
+	display: none;
+}
+
+/* Display the active tab panel */
+.tabs div[role="tabpanel"][aria-hidden="false"] {
+	display: block;
+}
+
+/* Remove default underline from links and set font weight to bold */
+a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+
+/*
+REFERENCES
+1.MDN
+2.W3Schools
+3.WCAG 
+*/
